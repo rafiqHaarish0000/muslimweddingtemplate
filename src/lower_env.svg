@@ -1,0 +1,166 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" preserveAspectRatio="xMidYMin meet" style="width:100%;height:100%;display:block;">
+  <defs>
+    <linearGradient id="envGradBot" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2c1a08"/>
+      <stop offset="100%" stop-color="#1a0f05"/>
+    </linearGradient>
+    <linearGradient id="goldGradB" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f0d078"/>
+      <stop offset="50%" stop-color="#c8973a"/>
+      <stop offset="100%" stop-color="#a07020"/>
+    </linearGradient>
+    <linearGradient id="sideFlap" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#221208"/>
+      <stop offset="100%" stop-color="#2c1a08"/>
+    </linearGradient>
+    <linearGradient id="creamBot" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f7eedc"/>
+      <stop offset="100%" stop-color="#ede0c4"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Main body background -->
+  <rect x="0" y="0" width="800" height="400" fill="url(#envGradBot)"/>
+
+  <!-- Left diagonal flap -->
+  <polygon points="0,0 200,0 0,400" fill="url(#sideFlap)" opacity="0.6"/>
+
+  <!-- Right diagonal flap -->
+  <polygon points="800,0 600,0 800,400" fill="url(#sideFlap)" opacity="0.6"/>
+
+  <!-- Bottom flap (triangle pointing up) -->
+  <polygon points="0,400 800,400 400,180" fill="#241508" opacity="0.7"/>
+
+  <!-- Cream bottom bottom border -->
+  <rect x="0" y="388" width="800" height="12" fill="url(#creamBot)" opacity="0.07"/>
+
+  <!-- Fold lines -->
+  <line x1="0" y1="0" x2="400" y2="180" stroke="#c8973a" stroke-width="1" opacity="0.35"/>
+  <line x1="800" y1="0" x2="400" y2="180" stroke="#c8973a" stroke-width="1" opacity="0.35"/>
+  <line x1="0" y1="400" x2="400" y2="180" stroke="#c8973a" stroke-width="1" opacity="0.35"/>
+  <line x1="800" y1="400" x2="400" y2="180" stroke="#c8973a" stroke-width="1" opacity="0.35"/>
+
+  <!-- Gold border -->
+  <rect x="4" y="4" width="792" height="392" fill="none" stroke="url(#goldGradB)" stroke-width="1.5" opacity="0.5"/>
+
+  <!-- Center ornament area (behind where stamp sits) -->
+  <g transform="translate(400, 185)">
+    <!-- Octagonal frame -->
+    <polygon points="0,-55 39,-39 55,0 39,39 0,55 -39,39 -55,0 -39,-39"
+      fill="none" stroke="url(#goldGradB)" stroke-width="1.5" opacity="0.8"/>
+    <polygon points="0,-44 31,-31 44,0 31,31 0,44 -31,31 -44,0 -31,-31"
+      fill="none" stroke="#c8973a" stroke-width="1" opacity="0.6"/>
+    <!-- Star of 8 -->
+    <g fill="#c8973a" opacity="0.5">
+      <polygon points="0,-48 3,-30 0,-25 -3,-30"/>
+      <polygon points="34,-34 22,-20 16,-22 20,-28"/>
+      <polygon points="48,0 30,3 25,0 30,-3"/>
+      <polygon points="34,34 20,28 16,22 22,20"/>
+      <polygon points="0,48 -3,30 0,25 3,30"/>
+      <polygon points="-34,34 -20,20 -22,16 -28,20"/>
+      <polygon points="-48,0 -30,-3 -25,0 -30,3"/>
+      <polygon points="-34,-34 -28,-20 -22,-16 -20,-28"/>
+    </g>
+    <!-- Inner circle -->
+    <circle cx="0" cy="0" r="20" fill="none" stroke="url(#goldGradB)" stroke-width="1" opacity="0.7"/>
+    <circle cx="0" cy="0" r="12" fill="#1e1005" stroke="#c8973a" stroke-width="0.8" opacity="0.9"/>
+    <!-- 4 tiny diamonds at compass points -->
+    <polygon points="0,-22 2,-18 0,-14 -2,-18" fill="#c8973a" opacity="0.9"/>
+    <polygon points="22,0 18,2 14,0 18,-2" fill="#c8973a" opacity="0.9"/>
+    <polygon points="0,22 -2,18 0,14 2,18" fill="#c8973a" opacity="0.9"/>
+    <polygon points="-22,0 -18,-2 -14,0 -18,2" fill="#c8973a" opacity="0.9"/>
+  </g>
+
+  <!-- Bottom center arabesque panel -->
+  <g transform="translate(400,330)" opacity="0.65">
+    <line x1="-180" y1="0" x2="180" y2="0" stroke="url(#goldGradB)" stroke-width="0.8"/>
+    <!-- Diamond row -->
+    <g fill="#c8973a">
+      <polygon points="-160,0 -155,-4 -150,0 -155,4"/>
+      <polygon points="-120,0 -115,-4 -110,0 -115,4"/>
+      <polygon points="-80,0 -75,-4 -70,0 -75,4"/>
+      <polygon points="-40,0 -35,-4 -30,0 -35,4"/>
+      <polygon points="30,0 35,-4 40,0 35,4"/>
+      <polygon points="70,0 75,-4 80,0 75,4"/>
+      <polygon points="110,0 115,-4 120,0 115,4"/>
+      <polygon points="150,0 155,-4 160,0 155,4"/>
+      <!-- Center large diamond -->
+      <polygon points="0,0 7,-6 0,-12 -7,-6" fill="none" stroke="#c8973a" stroke-width="1"/>
+      <polygon points="0,-1 5,-5 0,-9 -5,-5"/>
+    </g>
+  </g>
+
+  <!-- Bottom left corner ornament -->
+  <g transform="translate(55,350)">
+    <circle cx="0" cy="0" r="18" fill="none" stroke="url(#goldGradB)" stroke-width="1.2"/>
+    <circle cx="0" cy="0" r="10" fill="none" stroke="#c8973a" stroke-width="0.8"/>
+    <ellipse cx="0" cy="-8" rx="3" ry="6" fill="#c8973a" opacity="0.7"/>
+    <ellipse cx="0" cy="8" rx="3" ry="6" fill="#c8973a" opacity="0.7"/>
+    <ellipse cx="-8" cy="0" rx="6" ry="3" fill="#c8973a" opacity="0.7"/>
+    <ellipse cx="8" cy="0" rx="6" ry="3" fill="#c8973a" opacity="0.7"/>
+    <circle cx="0" cy="0" r="3" fill="#d4a840"/>
+  </g>
+
+  <!-- Bottom right corner ornament -->
+  <g transform="translate(745,350)">
+    <circle cx="0" cy="0" r="18" fill="none" stroke="url(#goldGradB)" stroke-width="1.2"/>
+    <circle cx="0" cy="0" r="10" fill="none" stroke="#c8973a" stroke-width="0.8"/>
+    <ellipse cx="0" cy="-8" rx="3" ry="6" fill="#c8973a" opacity="0.7"/>
+    <ellipse cx="0" cy="8" rx="3" ry="6" fill="#c8973a" opacity="0.7"/>
+    <ellipse cx="-8" cy="0" rx="6" ry="3" fill="#c8973a" opacity="0.7"/>
+    <ellipse cx="8" cy="0" rx="6" ry="3" fill="#c8973a" opacity="0.7"/>
+    <circle cx="0" cy="0" r="3" fill="#d4a840"/>
+  </g>
+
+  <!-- Left arabesque vine -->
+  <g opacity="0.5" stroke="url(#goldGradB)" fill="none" stroke-width="1">
+    <path d="M30,20 Q40,60 30,100 Q20,140 30,180 Q40,220 30,260 Q20,300 30,340"/>
+    <path d="M20,60 Q36,72 26,90"/>
+    <path d="M20,130 Q36,142 26,160"/>
+    <path d="M20,200 Q36,212 26,230"/>
+    <path d="M20,270 Q36,282 26,300"/>
+    <ellipse cx="14" cy="76" rx="6" ry="10" transform="rotate(-30,14,76)" fill="#c8973a" fill-opacity="0.4" stroke="none"/>
+    <ellipse cx="14" cy="146" rx="6" ry="10" transform="rotate(-30,14,146)" fill="#c8973a" fill-opacity="0.4" stroke="none"/>
+    <ellipse cx="14" cy="216" rx="6" ry="10" transform="rotate(-30,14,216)" fill="#c8973a" fill-opacity="0.4" stroke="none"/>
+    <ellipse cx="14" cy="286" rx="6" ry="10" transform="rotate(-30,14,286)" fill="#c8973a" fill-opacity="0.4" stroke="none"/>
+  </g>
+
+  <!-- Right arabesque vine (mirror) -->
+  <g opacity="0.5" stroke="url(#goldGradB)" fill="none" stroke-width="1">
+    <path d="M770,20 Q760,60 770,100 Q780,140 770,180 Q760,220 770,260 Q780,300 770,340"/>
+    <path d="M780,60 Q764,72 774,90"/>
+    <path d="M780,130 Q764,142 774,160"/>
+    <path d="M780,200 Q764,212 774,230"/>
+    <path d="M780,270 Q764,282 774,300"/>
+    <ellipse cx="786" cy="76" rx="6" ry="10" transform="rotate(30,786,76)" fill="#c8973a" fill-opacity="0.4" stroke="none"/>
+    <ellipse cx="786" cy="146" rx="6" ry="10" transform="rotate(30,786,146)" fill="#c8973a" fill-opacity="0.4" stroke="none"/>
+    <ellipse cx="786" cy="216" rx="6" ry="10" transform="rotate(30,786,216)" fill="#c8973a" fill-opacity="0.4" stroke="none"/>
+    <ellipse cx="786" cy="286" rx="6" ry="10" transform="rotate(30,786,286)" fill="#c8973a" fill-opacity="0.4" stroke="none"/>
+  </g>
+
+  <!-- Top horizontal ornament strip (fold edge) -->
+  <g transform="translate(400, 6)" opacity="0.6">
+    <line x1="-340" y1="0" x2="340" y2="0" stroke="url(#goldGradB)" stroke-width="0.8"/>
+    <g fill="#c8973a">
+      <polygon points="-300,0 -294,-4 -288,0 -294,4"/>
+      <polygon points="-240,0 -234,-4 -228,0 -234,4"/>
+      <polygon points="-180,0 -174,-4 -168,0 -174,4"/>
+      <polygon points="-120,0 -114,-4 -108,0 -114,4"/>
+      <polygon points="-60,0 -54,-4 -48,0 -54,4"/>
+      <polygon points="48,0 54,-4 60,0 54,4"/>
+      <polygon points="108,0 114,-4 120,0 114,4"/>
+      <polygon points="168,0 174,-4 180,0 174,4"/>
+      <polygon points="228,0 234,-4 240,0 234,4"/>
+      <polygon points="288,0 294,-4 300,0 294,4"/>
+    </g>
+  </g>
+
+  <!-- Subtle star pattern fill -->
+  <g opacity="0.07" fill="#d4a840">
+    <polygon points="160,280 163,292 175,292 165,300 169,312 160,304 151,312 155,300 145,292 157,292"/>
+    <polygon points="640,280 643,292 655,292 645,300 649,312 640,304 631,312 635,300 625,292 637,292"/>
+    <polygon points="400,340 402,349 411,349 404,355 406,364 400,358 394,364 396,355 389,349 398,349"/>
+    <polygon points="280,360 282,368 290,368 284,373 286,381 280,376 274,381 276,373 270,368 278,368"/>
+    <polygon points="520,360 522,368 530,368 524,373 526,381 520,376 514,381 516,373 510,368 518,368"/>
+  </g>
+</svg>
