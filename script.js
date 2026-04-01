@@ -456,7 +456,7 @@ function initTextReveal() {
       display: block;
       margin: 14px 0 0;
       font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(12px, 2vw, 16px);
+      font-size: clamp(28px, 2vw, 16px);
       letter-spacing: 4px;
       color: rgba(212,185,106,0.9);
       text-align: center;
@@ -517,7 +517,7 @@ function initTextReveal() {
 
 /* ── COUNTDOWN TIMER ── */
 (function () {
-  const weddingDate = new Date('2026-03-10T11:00:00');
+const weddingDate = new Date('2026-05-03T10:30:00+05:30');
 
   function update() {
     const now  = new Date();
@@ -566,3 +566,40 @@ window.addEventListener('load', () => {
     }
   });
 })();
+
+function selectTeam(team, el) {
+  const isMobile = window.innerWidth <= 768;
+  const allBtns = document.querySelectorAll('.team-btn');
+  const teamDiv = document.querySelector('.s4-team');
+
+  // Clear all previous state
+  allBtns.forEach(b => {
+    b.classList.remove('selected', 'mobile-hidden');
+    // Remove any existing emoji spans
+    const old = b.querySelector('.team-emoji');
+    if (old) old.remove();
+  });
+  teamDiv.classList.remove('groom-selected', 'bride-selected');
+
+  // Apply selected
+  el.classList.add('selected');
+
+  if (isMobile) {
+    // Create emoji span and inject into the selected button
+    const emoji = document.createElement('span');
+    emoji.className = 'team-emoji';
+    emoji.textContent = team === 'groom' ? '🤵' : '👰';
+    el.appendChild(emoji);
+
+    // Small delay so the span is in DOM before animating
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        emoji.classList.add('team-emoji-visible');
+      });
+    });
+
+    // Hide the button visuals
+    el.classList.add('mobile-hidden');
+    teamDiv.classList.add(team === 'groom' ? 'groom-selected' : 'bride-selected');
+  }
+}

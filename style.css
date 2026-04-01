@@ -36,7 +36,7 @@ body {
   --fs-xl:  clamp(48px, 9vw, 90px);
   --fs-lg:  clamp(36px, 6vw, 72px);
   --fs-md:  clamp(28px, 4.5vw, 53px);
-  --fs-sm:  clamp(22px, 3.5vw, 28px);
+  --fs-sm:  clamp(28px, 3.5vw, 28px);
   --fs-xs:  clamp(16px, 2.5vw, 20px);
   --fs-tag: clamp(14px, 2vw, 18px);
 
@@ -356,7 +356,7 @@ body {
 
 .events-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 60px;
   max-width: 1100px;
   margin: auto;
@@ -408,20 +408,20 @@ body {
 }
 
 .event-content h3 {
-  font-size: clamp(18px, 2.5vw, 28px);
+  font-size: clamp(28px, 2.5vw, 28px);
   letter-spacing: 3px;
   margin-bottom: 16px;
 }
 
 .event-content p {
-  font-size: clamp(13px, 1.5vw, 15px);
+  font-size: clamp(24px, 1.5vw, 15px);
   margin: 5px 0;
 }
 
 .event-content a {
   display: inline-block;
   margin-top: 10px;
-  font-size: clamp(13px, 1.5vw, 15px);
+  font-size: clamp(18px, 1.5vw, 15px);
   color: var(--teal);
   text-decoration: underline;
 }
@@ -578,9 +578,9 @@ body {
 }
 
 .s3-para {
-  font-size: clamp(16px, 2.2vw, 19px);
+  font-size: clamp(28px, 2.2vw, 19px);
   line-height: 1.95;
-  opacity: 0.85;
+  font-weight: 500;
   color: #fff;
 }
 
@@ -699,7 +699,7 @@ body {
 }
 
 .s4-heading {
-  font-size: clamp(36px, 3.5vw, 36px);
+  font-size: clamp(46px, 3.5vw, 36px);
   font-weight: 400;
   opacity: 0.65;
   letter-spacing: 4px;
@@ -719,7 +719,7 @@ body {
   padding: 16px 28px;
   border: 1.5px solid rgba(100,80,30,0.35);
   border-radius: 50px;
-  font-size: clamp(18px, 2.2vw, 21px);
+  font-size: clamp(28px, 2.2vw, 21px);
   cursor: pointer;
   transition: all 0.3s ease;
   background: rgba(255,255,255,0.15);
@@ -741,8 +741,9 @@ body {
 }
 
 .s4-team-label {
-  font-size: clamp(18px, 2.2vw, 24px);
+  font-size: clamp(28px, 2.2vw, 24px);
   margin: 0 0 20px;
+    font-weight: 400;
   letter-spacing: 1px;
 }
 
@@ -759,7 +760,7 @@ body {
   border-radius: 50px;
   border: 2px solid transparent;
   font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(18px, 2.2vw, 22px);
+  font-size: clamp(28px, 2.2vw, 22px);
   cursor: pointer;
   transition: all 0.3s ease;
   background: rgba(255,255,255,0.2);
@@ -837,7 +838,7 @@ body {
 
 .s4-insta-card p {
   font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(13px, 1.6vw, 15px);
+  font-size: clamp(18px, 1.6vw, 15px);
   color: var(--brown);
   text-align: center;
   margin: 0;
@@ -878,6 +879,158 @@ body {
   width: 70%;
   max-width: 700px;
   margin: -60px auto -200px;
+}
+
+/* ============================================================
+   SECTION 4 — INTERACTIVE CARD (add at END of your stylesheet)
+   ============================================================ */
+
+.s4-interact-card {
+  position: relative;
+  background: rgba(255, 248, 235, 0.18);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1.5px solid rgba(212, 185, 106, 0.35);
+  border-radius: 28px;
+  padding: 40px 36px 44px;
+  max-width: 500px;
+  margin: 0 auto 20px;
+  box-shadow:
+    0 8px 32px rgba(74, 59, 31, 0.18),
+    0 2px 8px rgba(0, 0, 0, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.25);
+}
+
+/* Subtle top glow line */
+.s4-interact-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 10%; right: 10%;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(212, 185, 106, 0.6),
+    transparent
+  );
+  border-radius: 50%;
+}
+
+/* Card section divider */
+.s4-card-divider {
+  width: 40px;
+  height: 1.5px;
+  background: rgba(212, 185, 106, 0.5);
+  margin: 28px auto;
+  border-radius: 2px;
+}
+
+/* Card heading label */
+.s4-card-label {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(14px, 2.5vw, 13px);
+  letter-spacing: 5px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: var(--brown);
+  text-align: center;
+  margin: 0 0 20px;
+}
+
+/* Override option styles inside card for better contrast */
+.s4-interact-card .s4-options {
+  margin-top: 20px;
+  margin-bottom: 0;
+  max-width: 100%;
+}
+
+.s4-interact-card .s4-option {
+  background: rgba(255, 255, 255, 0.22);
+  border-color: rgba(100, 80, 30, 0.28);
+  font-size: clamp(14px, 3.8vw, 18px);
+  padding: 14px 22px;
+  color: var(--brown);
+  font-family: 'Cormorant Garamond', serif;
+  letter-spacing: 0.5px;
+  transition: all 0.25s ease;
+}
+
+.s4-interact-card .s4-option:hover {
+  background: rgba(255, 255, 255, 0.40);
+  border-color: rgba(212, 185, 106, 0.7);
+  transform: scale(1.02);
+}
+
+.s4-interact-card .s4-option.selected {
+  background: rgba(212, 185, 106, 0.22);
+  border-color: var(--gold);
+  color: var(--brown);
+  font-weight: 600;
+  box-shadow: 0 2px 12px rgba(212, 185, 106, 0.25);
+}
+
+/* Team label inside card */
+.s4-interact-card .s4-team-label {
+  font-size: clamp(15px, 4vw, 19px);
+  color: var(--brown);
+  margin: 0 0 18px;
+  opacity: 0.85;
+}
+
+/* Team buttons inside card */
+.s4-interact-card .team-btn {
+  font-size: clamp(14px, 3.8vw, 18px);
+  padding: 13px 32px;
+  background: rgba(255, 255, 255, 0.18);
+  font-family: 'Cormorant Garamond', serif;
+  letter-spacing: 1px;
+}
+
+.s4-interact-card .team-groom:hover,
+.s4-interact-card .team-groom.selected {
+  background: rgba(74, 144, 217, 0.22);
+  box-shadow: 0 2px 14px rgba(74, 144, 217, 0.25);
+}
+
+.s4-interact-card .team-bride:hover,
+.s4-interact-card .team-bride.selected {
+  background: rgba(217, 74, 144, 0.22);
+  box-shadow: 0 2px 14px rgba(217, 74, 144, 0.25);
+}
+
+/* Celebrate button inside card */
+.s4-interact-card .celebrate-btn {
+  font-size: clamp(15px, 4vw, 20px);
+  padding: 15px 48px;
+  letter-spacing: 2.5px;
+  margin-top: 4px;
+  width: 100%;
+}
+
+/* ── Responsive adjustments ── */
+@media (max-width: 480px) {
+  .s4-interact-card {
+    padding: 30px 22px 36px;
+    border-radius: 22px;
+    margin: 0 12px 20px;
+    max-width: calc(100% - 24px);
+  }
+
+  .s4-interact-card .celebrate-btn {
+    padding: 14px 32px;
+    font-size: clamp(14px, 4vw, 18px);
+    letter-spacing: 2px;
+  }
+}
+
+@media (max-width: 360px) {
+  .s4-interact-card {
+    padding: 24px 16px 28px;
+    border-radius: 18px;
+    margin: 0 8px 16px;
+  }
+
+  .s4-card-divider { margin: 20px auto; }
 }
 
 /* ============================================================
@@ -1431,8 +1584,8 @@ body {
 
 .scroll-text {
   font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(18px, 1.8vw, 17px);
-  letter-spacing: 6px;
+  font-size: clamp(20px, 1.8vw, 17px);
+  letter-spacing: 2px;
   color: #fafafa;
   opacity: 1;
   text-shadow: 0 0 20px rgba(212, 185, 106, 0.8), 0 0 40px rgba(212, 185, 106, 0.4);
@@ -1440,10 +1593,10 @@ body {
 }
 
 .scroll-line {
-  width: 1.5px;
-  height: 60px;
+  width: 5.5px;
+  height: 50px;
   background: rgba(245, 230, 200, 0.2);
-  border-radius: 2px;
+  border-radius: 6px;
   position: relative;
   overflow: hidden;
 }
@@ -1467,8 +1620,3 @@ body {
   100% { top: 60px;  opacity: 0; }
 }
 
-.scroll-indicator.hidden {
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.6s ease;
-}
